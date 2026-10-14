@@ -1,0 +1,4 @@
+schema: '2.0'
+stages:
+  eda_pipeline:
+    cmd: python ./src/eda/Statistics.py ./data/raw/questions.csv
