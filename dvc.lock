@@ -2,3 +2,19 @@ schema: '2.0'
 stages:
   eda_pipeline:
     cmd: python ./src/eda/Statistics.py ./data/raw/questions.csv
+  plot:
+    cmd: python ./src/eda/plot.py ./data/raw/questions.csv ./content/graps/hist.jpg
+    deps:
+    - path: ./data/raw/questions.csv
+      hash: md5
+      md5: d314e283092f835eec3a82ad47e6aa26
+      size: 60747409
+    - path: ./src/eda/plot.py
+      hash: md5
+      md5: 6fc7436c6948189db21cbccbeeb0507c
+      size: 1175
+    outs:
+    - path: ./content/graps/hist.jpg
+      hash: md5
+      md5: 9ce8157d64a8f06dd7bea399321196f0
+      size: 30264

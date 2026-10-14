@@ -2,3 +2,12 @@ stages:
   eda_pipeline:
     cmd: python ./src/eda/Statistics.py ./data/raw/questions.csv
     
+  plot:
+    cmd: python ./src/eda/plot.py ./data/raw/questions.csv ./content/graps/hist.jpg
+    deps: 
+      - ./src/eda/plot.py
+      - ./data/raw/questions.csv
+    outs: 
+      - ./content/graps/hist.jpg
+
+   # hello   
