@@ -1,0 +1,17 @@
+name: CI 
+
+on:
+  push
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: chekout
+        uses: actions/checkout@v3
+      - name: setup
+        uses: actions/setup-python@v2
+      - name: install requirements
+        run: | 
+          pip install requirements.txt --cache-dir ~/.pip-cache

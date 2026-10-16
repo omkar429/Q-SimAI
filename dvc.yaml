@@ -1,7 +1,8 @@
 stages:
   eda_pipeline:
     cmd: python ./src/eda/Statistics.py ./data/raw/questions.csv
-    
+    deps:
+      - ./src/eda/Statistics.py    
   plot:
     cmd: python ./src/eda/plot.py ./data/raw/questions.csv ./content/graps/hist.jpg
     deps: 
