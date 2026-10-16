@@ -1,0 +1,19 @@
+name: CI Pipeline 
+
+on: 
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Chekout repro 
+        uses: actions/chekout@v4
+      
+      - name: Setup python
+        uses: actions/python-setup@v5
+
+      - name: Install Dependenc
+        run: |
+          pip install -r requirements.txt
