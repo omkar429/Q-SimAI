@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Chekout repro 
-        uses: actions/chekout@v3
+        uses: actions/checkout@v3
       
       - name: Setup python
         uses: actions/python-setup@v5
