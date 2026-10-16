@@ -17,8 +17,8 @@ jobs:
       - name: Install Dependenc
         run: |
           pip install -r requirements.txt
-         
-
+          pip install dvc
+          
       - name: Run 
         run: |
           dvc repro
